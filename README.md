@@ -1,42 +1,49 @@
 <h1 align="center">
     <img alt="Agility" src="images/cartola-fc-logo.png" height="100px" />
     <br>Challenge CartolaFC<br/>
-    PHP | Laravel | HTML | CSS
+    Python | Numpy | JSON |Docker
 </h1>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+
 </p>
 
 ## Sobre
 
-Desenvolvido usando PHP e Laravel, esta aplicação tem como objetivo fazer algumas requisições e tratar os dados retornados no formato JSON, além de mostrar na tela para que o usuário realize pesquisas filtrando os dados obtidos.
-
-Também foi desenvolvida o UX da aplicação pelo Figma, que pode ser acessado neste link: [Design Figma](https://www.figma.com/file/sVlFtVHyWKhfKxRCpOLkBL/Agility?node-id=0%3A1)
-
-<p align="center">
-  <img alt="design do projeto" width="650px" src="images/layout.png" />
-<p>
+Desenvolvido usando Python3 e a biblioteca [NumPy](https://numpy.org/), biblioteca de código aberto destinada a realizar operações em arrays multidimensionais.
 
 ## Como executar a aplicação?
 
-git clone https://github.com/slooock/agility.git
+git clone https://github.com/slooock/process.git
 
-cd agility
+cd process
 
-composer install
+docker build -t process .
 
-php artisan serve
+docker run -v $(pwd)/src:/src process
 
 ### OBS
 
-Ao executar a aplicação o usuário terá duas opções GET ou POST, como pedido na especificação. Também foi inserido campos em um formulário para que os usuarios sejam filtrados, é importante lembrar que os campos devem ser preenchidos exatamente como devem ser buscados por exemplo: Ao buscar um usuário que seja da Id Comunicação, a busca não pode ser feita passando apenas Comunicação ou apenas Id, deverá ser colocado Id Comunicação desta maneira todos os usuários que possuem este customer serão retornados na lista.
+O usuário deverá ter o [Docker](https://www.docker.com/) instalado na máquina, sendo assim o Dockerfile fica responsável pela execução e instalação das dependências necessárias.
 
-**Os usuários da Agility foram destacados usando o card rosa enquanto os demais estão com card verde**.
+### Entendendo a execução
 
-## License
+A pasta src possui 3 arquivos que são responsáveis pela execução do processo. E como resultado é criado um novo arquivo chamado response.
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### process.py
+
+Este é o arquivo principal onde é definida a função exigida. Além disso este aquivo é responsável por abrir o arquivo facts.json e schema.json e processar as informações com os dados fornecido nos arquivos.
+
+Foi desenvolvido desta maneira para facilitar o processo de teste, basta entrar com o json em facts e em schema que o processamento acontecerá de maneira dinâmica.
+
+#### facts.json
+
+Este é o nosso arquivo de entrada que possui os fatos.
+
+#### schema.json
+
+Este é o nosso arquivo de entrada que possui os o schema com as regras definidas.
+
+Em ambos (facts.json e schema.json) estão com as entradas padrão fornecidas como exemplo no exercício.
