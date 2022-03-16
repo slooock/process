@@ -46,4 +46,4 @@ Este é o nosso arquivo de entrada que possui os fatos.
 
 Este é o nosso arquivo de entrada que possui os o schema com as regras definidas.
 
-Em ambos (facts.json e schema.json) estão com as entradas padrão fornecidas como exemplo no exercício. O processo pode ser executado em um outro projeto, para isso basta importar processFacts(facts, schema), em seu projeto. Lembrando que na função processFacts, os parâmetros facts e schema são opcionais, caso não sejam passados será considerado o valor default (fornecido na documentação);
+Em ambos (facts.json e schema.json) estão com as entradas padrão fornecidas como exemplo no exercício. O processo pode ser executado em um outro projeto, para isso basta importar processFacts(facts, schema), em seu projeto. Lembrando que na função processFacts, os parâmetros facts e schema são opcionais, caso não sejam passados será considerado o valor default (fornecido na documentação).
