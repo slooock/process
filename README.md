@@ -30,7 +30,7 @@ O usuário deverá ter o [Docker](https://www.docker.com/) instalado na máquina
 
 ### Entendendo a execução
 
-A pasta src possui 3 arquivos que são responsáveis pela execução do processo. E como resultado é criado um novo arquivo chamado response.json.
+A pasta src possui 3 arquivos, (facts.json, schema.json, process.py) que são responsáveis pela execução do processo. E como resultado é criado um novo arquivo chamado response.json. Os arquivos facts.json e schema.json podem ser personalizados da maneira mais convincente a fim de realizar novos testes.
 
 #### process.py
 
