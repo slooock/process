@@ -14,15 +14,25 @@
 
 Desenvolvido usando Python3 e a biblioteca [NumPy](https://numpy.org/), biblioteca de código aberto destinada a realizar operações em arrays multidimensionais.
 
+Para esta aplicação também foi desenvolvida uma API com Flask que se encontra hospedada em [https://flaskapicartola.herokuapp.com/](https://flaskapicartola.herokuapp.com/), o reposit´rio da API está em [https://github.com/slooock/flask](https://github.com/slooock/flask)
+
 ## Como executar a aplicação?
 
+```
 git clone https://github.com/slooock/process.git
+```
 
+```
 cd process
+```
 
+```
 docker build -t process .
+```
 
+```
 docker run -v $(pwd)/src:/src process
+```
 
 ### OBS
 
